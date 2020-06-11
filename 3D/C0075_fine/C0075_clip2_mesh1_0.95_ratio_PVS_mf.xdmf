@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE Xdmf SYSTEM "Xdmf.dtd" []>
+<Xdmf Version="3.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <Domain>
+    <Grid Name="mesh" GridType="Uniform">
+      <Topology NumberOfElements="360010" TopologyType="Triangle" NodesPerElement="3">
+        <DataItem Dimensions="360010 3" NumberType="UInt" Format="HDF">C0075_clip2_mesh1_0.95_ratio_PVS_mf.h5:/MeshFunction/0/mesh/topology</DataItem>
+      </Topology>
+      <Geometry GeometryType="XYZ">
+        <DataItem Dimensions="34265 3" Format="HDF">C0075_clip2_mesh1_0.95_ratio_PVS_mf.h5:/MeshFunction/0/mesh/geometry</DataItem>
+      </Geometry>
+      <Attribute Name="f" AttributeType="Scalar" Center="Cell">
+        <DataItem Dimensions="360010 1" Format="HDF">C0075_clip2_mesh1_0.95_ratio_PVS_mf.h5:/MeshFunction/0/values</DataItem>
+      </Attribute>
+    </Grid>
+  </Domain>
+</Xdmf>
