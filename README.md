@@ -5,7 +5,7 @@ Simulation code, meshes and associated data to reproduce numerical examples pres
 
 The 2D axi and 3D simulations are performed using CFD models based on the [FEniCS project](https://fenicsproject.org/).
 
-The corresponding Python scripts can be run within the latest [FEniCS Docker container](quay.io/fenicsproject/dev)
+The corresponding Python scripts can be run within the latest [FEniCS Docker container](https://quay.io/repository/fenicsproject/dev)
 with the last version of [Scipy](https://www.scipy.org/) installed :
 ```
 git clone https://github.com/cdaversin/mechanisms-behind-pvs-flow.git
@@ -38,5 +38,16 @@ jupyter-notebook
 Note : The data files used in the notebooks are present in the repository by default, and are re-generated
 when running the models as described in the [dedicated section](#models)
 
+## Mesh generation
+The generation of the 3D PVS mesh presented in the paper is performed using [VMTK](http://www.vmtk.org/)
+on a clipped geometry from [Aneurisk dataset](http://ecm2.mathcs.emory.edu/aneuriskweb/repository) (case id C0075).
+The meshes in `mechanisms-behind-pvs-flow/3D/C0075_fine` to be used in our 3D model are generated using the
+dedicated bash script
+```
+cd mechanisms-behind-pvs-flow/MeshGeneration
+bash generate_meshes.sh
+```
+This mesh generation tool requires both [VMTK](http://www.vmtk.org/) and [FEniCS](https://fenicsproject.org/).
+
 ## Reporting issues
-Any questions regarding this repository can be posted as [Issues](https://github.com/cdaversin/mechanisms-behind-pvs-flow/issues)
+Any questions regarding this repository can be posted as [Issues](https://github.com/cdaversin/mechanisms-behind-pvs-flow/issues).
